@@ -1,0 +1,55 @@
+/* Style for the container */
+#container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Center the h1 title */
+h1 {
+    text-align: center;
+    color: rgba(30, 58, 95, 0.8); /* Navy Blue with transparency */
+}
+
+/* Center the h3 text */
+h3 {
+    text-align: center;
+    color: rgba(214, 168, 0, 0.8); /* Gold with transparency */
+}
+
+/* Image Gallery Grid */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px;
+    margin-top: 10%;
+}
+
+/* Individual Gallery Items */
+.gallery-item {
+    text-align: center;
+}
+
+/* Center the image in the figure */
+figure {
+    text-align: center;
+}
+
+/* Style for the figcaption */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(255, 69, 0, 0.8); /* Orange-Red with transparency */
+}
+
+/* Style for bottom div */
+#bottom-div {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline;
+}
