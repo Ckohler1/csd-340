@@ -1,0 +1,58 @@
+/* Set base font size */
+html, body {
+    font-size: 16px;
+}
+
+/* Style paragraphs */
+p {
+    font-weight: 400; /* Set paragraph text weight */
+    line-height: 1.4em; /* Set line height */
+}
+
+/* Style h1 */
+h1 {
+    font-weight: 700; /* Set h1 text weight */
+    text-transform: uppercase; /* Make h1 uppercase */
+    text-align: center; /* Center align h1 */
+}
+
+/* Style h2 */
+h2 {
+    font-weight: 500; /* Set h2 text weight */
+    text-align: left; /* Left align h2 */
+    padding-top: 15px; /* Add top padding */
+}
+
+/* Center address text */
+address {
+    text-align: center;
+}
+
+/* Style website URL */
+address a {
+    font-weight: bold; /* Make URL bold */
+    font-size: 1.25em; /* Set font size */
+    color: #4F3674; /* Set color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style hover effect */
+address a:hover {
+    text-decoration: underline; /* Add underline */
+    background-color: #D6A800; /* Change background */
+}
+
+/* Style visited link */
+address a:visited {
+    color: #6A5ACD; /* Custom color */
+}
+
+/* Italicize sentence class */
+.sentence {
+    font-style: italic;
+}
+
+/* Indent first paragraph */
+.intro {
+    text-indent: 2em;
+}
