@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Colton">
+    <meta name="description" content="Assignment 9.3 - JavaScript - Part 1">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Kohler_Mod9_3.css">
+    <script>
+        var words = {
+            span1: "death",
+            span2: "wife",
+            span3: "crowns",
+            span4: "shield"
+        };
+
+        function revealWord(spanId) {
+            document.getElementById(spanId).innerHTML = words[spanId];
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Night's Watch Oath</h2>
+
+        <p>Night gathers, and now my watch begins. It shall not end until my <span id="span1">________</span>.</p>
+        <button type="button" onclick="revealWord('span1')">Reveal Word</button>
+        
+        <p>I shall take no <span id="span2">________</span>, hold no lands, father no children.</p>
+        <button type="button" onclick="revealWord('span2')">Reveal Word</button>
+        
+        <p>I shall wear no <span id="span3">________</span> and win no glory.</p>
+        <button type="button" onclick="revealWord('span3')">Reveal Word</button>
+        
+        <p>I shall live and die at my post.</p>
+        
+        <p>I am the sword in the darkness. I am the watcher on the walls.</p>
+        
+        <p>I am the <span id="span4">________</span> that guards the realms of men.</p>
+        <button type="button" onclick="revealWord('span4')">Reveal Word</button>
+        
+        <p>I pledge my life and honor to the Night's Watch, for this night and all the nights to come.</p>
+
+        <hr />
+
+        <address>
+            <p><a href="https://www.bellevue.edu/" target="_blank">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+    </div>
+</body>
+</html>
+
