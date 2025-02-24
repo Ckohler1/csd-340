@@ -1,0 +1,41 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #FCEFF9;
+    color: #4B4B4B;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #C3E2DD;
+    padding: 20px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Image Styling */
+img {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #F7D6E0;
+    padding: 10px;
+    margin-top: 20px;
+}

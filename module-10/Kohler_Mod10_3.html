@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Colton Kohler">
+    <meta name="description" content="Assignment 10.3 - JavaScript - Part 2">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Kohler_Mod10_3.css">
+    <script>
+        // Function to swap the clicked image between summer and fall
+        function swapSeasonImage() {
+            var seasonImg = document.getElementById("season");
+            if (seasonImg.src.includes("summer.jpg")) {
+                seasonImg.src = "fall.jpg";
+            } else {
+                seasonImg.src = "summer.jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    </header>
+
+    <main>
+        <h2>Image Swap on Hover</h2>
+        <p>Hover over the building to see it change.</p>
+        <div>
+            <img id="building" src="building1.png" alt="Building View"
+                onmouseover="this.src='building2.png';"
+                onmouseout="this.src='building1.png';">
+        </div>
+
+        <h2>Image Swap on Click</h2>
+        <p>Click the image to change seasons.</p>
+        <div>
+            <img id="season" src="summer.jpg" alt="Seasonal View" onclick="swapSeasonImage();">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Colton Kohler</p>
+    </footer>
+
+</body>
+</html>
+
