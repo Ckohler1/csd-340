@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Colton Kohler">
+    <meta name="description" content="Assignment 11.2 - JavaScript - Part 3">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Kohler_Mod11_2.css">
+    <script>
+        let listItems = []; // Array to store user entries
+
+        // Function to add a new entry to the list
+        function addEntry() {
+            let userInput = document.getElementById("userInput");
+            let entry = userInput.value.trim();
+
+            if (entry !== "") {
+                listItems.push(entry);
+                alert(`"${entry}" has been added at position ${listItems.length}.`);
+                userInput.value = ""; // Clear input field
+            } else {
+                alert("Please enter a valid item before adding.");
+            }
+        }
+
+        // Function to remove the last entry from the list
+        function removeLastEntry() {
+            if (listItems.length > 0) {
+                let deletedEntry = listItems.pop();
+                alert(`"${deletedEntry}" has been removed from the list.`);
+            } else {
+                alert("The list is empty. Nothing to remove.");
+            }
+        }
+
+        // Function to display the list of entries
+        function showList() {
+            let listContainer = document.getElementById("listContainer");
+            listContainer.innerHTML = ""; // Clear previous content
+
+            if (listItems.length > 0) {
+                let listHTML = "<ul>";
+                listItems.forEach((item, index) => {
+                    listHTML += `<li>${index + 1}. ${item}</li>`; // Numbered list starting at 1
+                });
+                listHTML += "</ul>";
+                listContainer.innerHTML = listHTML;
+            } else {
+                listContainer.innerHTML = "<p>The list is currently empty.</p>";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    </header>
+
+    <main>
+        <h2>Manage Your Entries</h2>
+        <p>Enter an item in the field below and use the buttons to manage your list.</p>
+
+        <input type="text" id="userInput" placeholder="Type something here">
+        <br><br>
+        <button onclick="addEntry()">Add</button>
+        <button onclick="removeLastEntry()">Delete Last Entry</button>
+        <br>
+        <p>Click the "Display" button to display the current list.</p>
+        <button onclick="showList()">Display</button>
+
+        <h3>Current List:</h3>
+        <div id="listContainer"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Colton Kohler</p>
+    </footer>
+
+</body>
+</html>
