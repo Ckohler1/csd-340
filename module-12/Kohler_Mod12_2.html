@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Documentation: Colton Kohler - Assignment 12.2 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Kohler_Mod12_2.css">
+    <script>
+        // Array of top 10 favorite books
+        const books = [
+            "Harry Potter Series",
+            "The Inheritance Cycle",
+            "Game of Thrones (A Song of Ice and Fire)",
+            "Rich Dad Poor Dad",
+            "The Intelligent Investor",
+            "The Chronicles of Narnia",
+            "The Hobbit",
+            "Lord of the Rings Trilogy",
+            "The Martian",
+            "Atomic Habits"
+        ];
+        
+        // Function to display books in ascending order
+        function displayAscending() {
+            let list = books.slice().sort();
+            document.getElementById("book-list").innerHTML = list.map(book => `<li>${book}</li>`).join('');
+        }
+        
+        // Function to display books in descending order
+        function displayDescending() {
+            let list = books.slice().sort().reverse();
+            document.getElementById("book-list").innerHTML = list.map(book => `<li>${book}</li>`).join('');
+        }
+    </script>
+</head>
+<body>
+    <!-- Main container -->
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+        <!-- Book List Section -->
+        <div id="left-div">
+            <h3>Top 10 Favorite Books</h3>
+            <ol id="book-list">
+                <li>Harry Potter Series</li>
+                <li>The Inheritance Cycle</li>
+                <li>Game of Thrones (A Song of Ice and Fire)</li>
+                <li>Rich Dad Poor Dad</li>
+                <li>The Intelligent Investor</li>
+                <li>The Chronicles of Narnia</li>
+                <li>The Hobbit</li>
+                <li>Lord of the Rings Trilogy</li>
+                <li>The Martian</li>
+                <li>Atomic Habits</li>
+            </ol>
+            
+            <!-- Buttons for sorting -->
+            <button onclick="displayAscending()">Top to Bottom</button>
+            <button onclick="displayDescending()">Bottom to Top</button>
+        </div>
+
+        <!-- Learning Section -->
+        <div id="right-div">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+            <ul>
+                <li>How to properly structure an HTML document.</li>
+                <li>The importance of CSS for styling web pages.</li>
+                <li>How to use GitHub for version control.</li>
+                <li>The difference between block and inline elements.</li>
+                <li>How to use CSS selectors to target elements.</li>
+            </ul>
+        </div>
+
+        <!-- Bottom div -->
+        <div id="bottom-div">
+            <a href="../index.html">Return to Landing Page</a>
+        </div>
+    </div>
+</body>
+</html>
